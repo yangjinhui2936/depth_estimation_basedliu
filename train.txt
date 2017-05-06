@@ -1,0 +1,6 @@
+examples/Depth_estimation_basedLiu/data/train_city10_2.h5
+examples/Depth_estimation_basedLiu/data/train_city10_3.h5
+examples/Depth_estimation_basedLiu/data/train_city10_4.h5
+
+
+
