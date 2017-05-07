@@ -9,7 +9,7 @@ layer{
   }
   hdf5_data_param{
     source: "examples/Depth_estimation_basedLiu/train.txt"
-    batch_size: 5
+    batch_size: 50
   }
 }
 layer{
@@ -22,7 +22,7 @@ layer{
   }
   hdf5_data_param{
     source: "examples/Depth_estimation_basedLiu/test.txt"
-    batch_size: 5
+    batch_size: 25
   }
 }
 
