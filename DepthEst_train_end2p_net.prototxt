@@ -32,15 +32,22 @@ layer {
   bottom: "data"
   top: "conv1"
   param {
-    lr_mult: 1
+    lr_mult: 50
   }
   param {
-    lr_mult: 1
+    lr_mult: 100
   }
   convolution_param {
     num_output: 64
     pad: 5
     kernel_size: 11
+    weight_filler {
+      type: "Xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
   }
 }
 
@@ -69,15 +76,22 @@ layer {
   bottom: "pool1"
   top: "conv2"
   param {
-    lr_mult: 1
+    lr_mult: 50
   }
   param {
-    lr_mult: 1
+    lr_mult: 100
   }
   convolution_param {
     num_output: 256
     pad: 2
     kernel_size: 5
+    weight_filler {
+      type: "Xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
   }
 }
 layer {
@@ -104,15 +118,22 @@ layer {
   bottom: "pool2"
   top: "conv3"
   param {
-    lr_mult: 1
+    lr_mult: 50
   }
   param {
-    lr_mult: 1
+    lr_mult: 100
   }
   convolution_param {
     num_output: 256
     pad: 1
     kernel_size: 3
+    weight_filler {
+      type: "Xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
   }
 }
 layer {
@@ -127,15 +148,22 @@ layer {
   bottom: "conv3"
   top: "conv4"
   param {
-    lr_mult: 1
+    lr_mult: 50
   }
   param {
-    lr_mult: 1
+    lr_mult: 100
   }
   convolution_param {
     num_output: 256
     pad: 1
     kernel_size: 3
+    weight_filler {
+      type: "Xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
   }
 }
 layer {
@@ -150,15 +178,22 @@ layer {
   bottom: "conv4"
   top: "conv5"
   param {
-    lr_mult: 1
+    lr_mult: 50
   }
   param {
-    lr_mult: 1
+    lr_mult: 100
   }
   convolution_param {
     num_output: 256
     pad: 1
     kernel_size: 3
+    weight_filler {
+      type: "Xavier"
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
   }
 }
 layer {
@@ -187,16 +222,15 @@ layer {
   bottom: "pool3"
   top: "fc6"
   param {
-    lr_mult: 1
+    lr_mult: 5
   }
   param {
-    lr_mult: 1
+    lr_mult: 10
   }
   
   inner_product_param {
     weight_filler {
-      type: "gaussian"
-      std: 0.01
+      type: "Xavier"
     }
     num_output: 4096
   }
@@ -223,16 +257,15 @@ layer {
   bottom: "fc6"
   top: "fc7"
   param {
-    lr_mult: 1
+    lr_mult: 5
   }
   param {
-    lr_mult: 1
+    lr_mult: 10
   }
   
   inner_product_param {
     weight_filler {
-      type: "gaussian"
-      std: 0.01
+      type: "Xavier"
     }
     num_output: 128
   }
@@ -250,16 +283,15 @@ layer {
   bottom: "fc7"
   top: "fc8"
   param {
-    lr_mult: 1
+    lr_mult: 5
   }
   param {
-    lr_mult: 1
+    lr_mult: 10
   }
   
   inner_product_param {
     weight_filler {
-      type: "gaussian"
-      std: 0.01
+      type: "Xavier"
     }
     num_output: 16
   }
@@ -277,16 +309,15 @@ layer {
   bottom: "fc8"
   top: "fc9"
   param {
-    lr_mult: 1
+    lr_mult: 5
   }
   param {
-    lr_mult: 1
+    lr_mult: 10
   }
   
   inner_product_param {
     weight_filler {
-      type: "gaussian"
-      std: 0.01
+      type: "Xavier"
     }
     num_output: 1
   }
