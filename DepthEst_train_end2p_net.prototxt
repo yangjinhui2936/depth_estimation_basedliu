@@ -32,10 +32,10 @@ layer {
   bottom: "data"
   top: "conv1"
   param {
-    lr_mult: 50
+    lr_mult: 5
   }
   param {
-    lr_mult: 100
+    lr_mult: 10
   }
   convolution_param {
     num_output: 64
@@ -76,10 +76,10 @@ layer {
   bottom: "pool1"
   top: "conv2"
   param {
-    lr_mult: 50
+    lr_mult: 5
   }
   param {
-    lr_mult: 100
+    lr_mult: 10
   }
   convolution_param {
     num_output: 256
@@ -118,10 +118,10 @@ layer {
   bottom: "pool2"
   top: "conv3"
   param {
-    lr_mult: 50
+    lr_mult: 5
   }
   param {
-    lr_mult: 100
+    lr_mult: 10
   }
   convolution_param {
     num_output: 256
@@ -148,10 +148,10 @@ layer {
   bottom: "conv3"
   top: "conv4"
   param {
-    lr_mult: 50
+    lr_mult: 5
   }
   param {
-    lr_mult: 100
+    lr_mult: 10
   }
   convolution_param {
     num_output: 256
@@ -178,10 +178,10 @@ layer {
   bottom: "conv4"
   top: "conv5"
   param {
-    lr_mult: 50
+    lr_mult: 5
   }
   param {
-    lr_mult: 100
+    lr_mult: 10
   }
   convolution_param {
     num_output: 256
