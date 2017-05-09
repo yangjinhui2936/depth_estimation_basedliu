@@ -42,7 +42,7 @@ layer {
     pad: 5
     kernel_size: 11
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
@@ -86,7 +86,7 @@ layer {
     pad: 2
     kernel_size: 5
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
@@ -128,7 +128,7 @@ layer {
     pad: 1
     kernel_size: 3
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
@@ -158,7 +158,7 @@ layer {
     pad: 1
     kernel_size: 3
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
@@ -188,7 +188,7 @@ layer {
     pad: 1
     kernel_size: 3
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     bias_filler {
       type: "constant"
@@ -230,7 +230,7 @@ layer {
   
   inner_product_param {
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     num_output: 4096
   }
@@ -265,7 +265,7 @@ layer {
   
   inner_product_param {
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     num_output: 128
   }
@@ -291,14 +291,14 @@ layer {
   
   inner_product_param {
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     num_output: 16
   }
 }
 layer {
-  name: "sig8"
-  type: "Sigmoid"
+  name: "relu8"
+  type: "ReLU"
   bottom: "fc8"
   top: "fc8"
 }
@@ -317,10 +317,17 @@ layer {
   
   inner_product_param {
     weight_filler {
-      type: "Xavier"
+      type: "xavier"
     }
     num_output: 1
   }
+}
+
+layer {
+  name: "relu9"
+  type: "ReLU"
+  bottom: "fc9"
+  top: "fc9"
 }
 
 layer {

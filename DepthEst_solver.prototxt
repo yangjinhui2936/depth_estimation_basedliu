@@ -22,8 +22,8 @@ average_loss: 5
 # The maximum number of iterations
 max_iter: 100000
 # snapshot intermediate results
-snapshot: 300
-snapshot_prefix: "examples/Depth_estimation_basedLiu/models/Model_lr_test"
+snapshot: 800
+snapshot_prefix: "examples/Depth_estimation_basedLiu/models/Model_no_sigmoid"
 # solver mode: CPU or GPU
 solver_mode: GPU
 
