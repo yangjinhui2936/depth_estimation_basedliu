@@ -3,7 +3,7 @@ net: "examples/Depth_estimation_basedLiu/DepthEst_train_end2p_net.prototxt"
 # covering the full 130 testing images.
 test_iter: 380
 # Carry out testing every 500 training iterations.
-test_interval: 100
+test_interval: 200
 # The base learning rate, momentum and the weight decay of the network.
 
 iter_size: 19
@@ -23,7 +23,7 @@ average_loss: 5
 max_iter: 100000
 # snapshot intermediate results
 snapshot: 800
-snapshot_prefix: "examples/Depth_estimation_basedLiu/models/Model_make3d_"
+snapshot_prefix: "examples/Depth_estimation_basedLiu/models/Model_sigmoid_finetune_"
 # solver mode: CPU or GPU
 solver_mode: GPU
 
