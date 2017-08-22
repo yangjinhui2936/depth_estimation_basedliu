@@ -1,5 +1,5 @@
 %shuffle files
-fileName = 'train.txt';
+fileName = 'train_combined.txt';
 
 fid = fopen(fileName,'r');
 
