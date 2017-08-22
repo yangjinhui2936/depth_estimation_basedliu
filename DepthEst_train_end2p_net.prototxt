@@ -8,7 +8,7 @@ layer{
     phase: TRAIN
   }
   hdf5_data_param{
-    source: "examples/Depth_estimation_basedLiu/train_make3d.txt"
+    source: "examples/Depth_estimation_basedLiu/train_combined.txt"
     batch_size: 50
   }
 }
@@ -21,7 +21,7 @@ layer{
     phase: TEST
   }
   hdf5_data_param{
-    source: "examples/Depth_estimation_basedLiu/test_make3d.txt"
+    source: "examples/Depth_estimation_basedLiu/test_combined.txt"
     batch_size: 25
   }
 }

@@ -18,12 +18,12 @@ momentum: 0.9
 weight_decay: 0.0005
 # Display every 100 iterations
 display: 5
-average_loss: 5
+average_loss: 50
 # The maximum number of iterations
 max_iter: 100000
 # snapshot intermediate results
 snapshot: 800
-snapshot_prefix: "examples/Depth_estimation_basedLiu/models/Model_sigmoid_finetune_"
+snapshot_prefix: "examples/Depth_estimation_basedLiu/models/Model_sigmoid_combinedtune_"
 # solver mode: CPU or GPU
 solver_mode: GPU
 
